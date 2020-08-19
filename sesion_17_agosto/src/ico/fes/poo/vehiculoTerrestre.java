@@ -22,6 +22,13 @@ public class vehiculoTerrestre extends Vehiculo {
         this.kmPorHora = kmPorHora;
     }
 
+    public vehiculoTerrestre(int tipo, String kmPorHora, String descripcion, String fabricante, String material) {
+        super(descripcion, fabricante, material);
+        this.tipo = tipo;
+        this.kmPorHora = kmPorHora;
+    }
+
+    
     public String getKmPorHora() {
         return kmPorHora;
     }
@@ -62,5 +69,11 @@ public class vehiculoTerrestre extends Vehiculo {
                     
         }
         return 100;
+    }
+    
+    @Override
+    public void usar(){
+        System.out.println("Utilizando el ferrocarril que viaja en vias ferreas"
+                + "de la marca" + this.getFabricante());
     }
 }
